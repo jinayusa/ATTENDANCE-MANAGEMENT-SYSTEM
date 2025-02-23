@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Attendance Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack Attendance Management System built with React, Node.js, Express, and MongoDB. It allows you to add and manage students, subjects, timetables, and attendance records. The system includes a modern UI with features to mark attendance and view attendance details with visual indicators.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Student Management:** Add and view students.
+- **Subject Management:** Add and view subjects.
+- **Timetable Management:** Create timetables for different days and subjects.
+- **Attendance Marking:** Mark student attendance (present/absent) for selected dates and subjects.
+- **Attendance Overview:** Display attendance records with visual indicators (green circle for present, red circle for absent).
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+attendance-management-system/ ├── client │ ├── package.json │ ├── public/ │ │ └── index.html │ └── src/ │ ├── index.js │ ├── App.jsx │ ├── pages/ │ │ ├── AttendancePage.jsx │ │ ├── StudentPage.jsx │ │ ├── SubjectPage.jsx │ │ └── TimetablePage.jsx │ ├── components/ │ │ ├── Attendance.jsx │ │ ├── AttendanceDisplay.jsx │ │ ├── StudentForm.jsx │ │ ├── StudentList.jsx │ │ ├── SubjectForm.jsx │ │ ├── SubjectList.jsx │ │ ├── TimetableForm.jsx │ │ └── TimetableList.jsx │ └── styles/ │ ├── Attendance.module.css │ ├── AttendanceDisplay.module.css │ ├── StudentForm.module.css │ ├── StudentList.module.css │ ├── SubjectForm.module.css │ ├── SubjectList.module.css │ ├── TimetableForm.module.css │ └── TimetableList.module.css └── server ├── package.json ├── server.js └── models/ ├── Student.js ├── Subject.js ├── Timetable.js └── Attendance.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- [Node.js and npm](https://nodejs.org/) installed.
+- [MongoDB](https://www.mongodb.com/) installed and running (or use MongoDB Atlas).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setting Up the Server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Navigate to the server folder:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd server
+Install dependencies:
 
-### `npm run eject`
+npm install
+Start the server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
+The server runs on port 5001 by default. Ensure MongoDB is running and the connection string in server.js matches your setup (default is mongodb://localhost:27017/attendanceDB).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Setting Up the Client
+Open a new terminal window and navigate to the client folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+cd client
+Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
+Start the client application:
 
-## Learn More
+npm start
+The React app runs on port 3000 by default.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Usage
+Students:
+Navigate to the Students page to add and view student records.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Subjects:
+Navigate to the Subjects page to add and view subjects.
 
-### Code Splitting
+Timetables:
+Create and view timetables for various days and subjects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Attendance:
 
-### Analyzing the Bundle Size
+On the Attendance page, select a subject and date.
+Mark each student as present or absent.
+Submit to record the attendance.
+View attendance records with a clear visual indicator (green circle for present, red circle for absent) using the Attendance Overview component.
+Troubleshooting
+Data Not Showing Up:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Verify that your server is running on port 5001.
+Use Postman or MongoDB Compass to check that attendance records are being created in the database.
+Check the browser console and network tab for any API request errors.
+MongoDB Connection:
+Ensure that your MongoDB instance is running and that the connection string in server.js is correct.
 
-### Making a Progressive Web App
+CORS Issues:
+The server is configured with CORS enabled. If you run into issues, verify that requests are allowed from the client origin.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributing
+Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to modify.
 
-### Advanced Configuration
+License
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgments
+React
+Express
+MongoDB
+Mongoose
