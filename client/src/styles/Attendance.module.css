@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .studentAttendance {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .studentRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .studentRow span {
+    flex: 1;
+  }
+  
+  .studentRow select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
