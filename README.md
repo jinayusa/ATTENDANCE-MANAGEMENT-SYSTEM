@@ -29,23 +29,23 @@ attendance-management-system/ ├── client │ ├── package.json │ �
    ```bash
    cd server
 Install dependencies:
-```bash
-npm install
+   ```bash
+   npm install
 Start the server:
-```bash
-npm start
+   ```bash
+   npm start
 The server runs on port 5001 by default. Ensure MongoDB is running and the connection string in server.js matches your setup (default is mongodb://localhost:27017/attendanceDB).
 
 Setting Up the Client
 Open a new terminal window and navigate to the client folder:
-```bash
-cd client
+   ```bash
+   cd client
 Install dependencies:
-```bash
-npm install
+   ```bash
+   npm install
 Start the client application:
-```bash
-npm start
+   ```bash
+   npm start
 The React app runs on port 3000 by default.
 
 Usage
